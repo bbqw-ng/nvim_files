@@ -34,11 +34,12 @@ return require("packer").startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use {
+  --This is the tree you can turn it on if you want.
+  --[[use {
   'nvim-tree/nvim-tree.lua',
   requires = {
     'nvim-tree/nvim-web-devicons', -- optional
   },
-}
+} ]]--
 
 end)
