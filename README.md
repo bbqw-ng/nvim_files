@@ -23,8 +23,9 @@ sudo apt install xorg
 sudo apt install xclip (copying and pasting to system clipboard)
 
 # Misc --->
-Font: Jetbrains Mono Regular
+Font: Jetbrains Nerd Font (Nerd Fonts are term viable)
 FontSize: 10 on terminal(s)
+Other Fonts: Hurmit 
 To remove the annoying "^M"s in certain files, you can do 
 ":%s/\r//g" This removes all the carriage returns :). Also the "^M"s 
 are supposedly mismatched endings.
