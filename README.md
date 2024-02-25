@@ -40,3 +40,7 @@ are supposedly mismatched endings.
 7. configure to your will.
 
 
+
+# Perhaps more plugins to come another day:
+- ranger.nvim
+- nerdtree
