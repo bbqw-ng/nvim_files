@@ -1,46 +1,73 @@
-# Configs followed by ThePrimeagen on youtube.
-git clone to $USER folder, and then change name to .config.
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+set -g default-terminal "tmux-256color"
+set -ag terminal-overrides ",xterm-256color:RGB"
+set-option -sg escape-time 10
 
-# To Update Your Neovim
-1. Download app image,
-2. Move to /opt folder (accessible anywhere)
-3. Create a symbolic link with lh -s (filename) (destination)
-4. Move it to /usr/bin/nvim (nvim being the symbolic link alias)
-5. You are done!
+set -g prefix C-a
+unbind C-b
+bind-key C-a send-prefix
 
-# Installs --->
-**More to be added when remembered**
+unbind %
+bind \\ split-window -h
 
-sudo apt install zsh
-install powerlevel10k alongside zsh
+unbind '"'
+bind - split-window -v
 
-# Display problems?
-try updating linux subsystem
-wsl.exe --upgrade or something like that
+unbind r
+bind r source-file ~/.tmux.conf
 
-sudo apt install git
-sudo apt install xorg
-sudo apt install xclip (copying and pasting to system clipboard)
+bind -r j resize-pane -D 5
+bind -r k resize-pane -U 5
+bind -r l resize-pane -R 5
+bind -r h resize-pane -L 5
 
-# Misc --->
-Font: Jetbrains Nerd Font (Nerd Fonts are term viable)
-FontSize: 10 on terminal(s)
-Other Fonts: Hurmit 
-To remove the annoying "^M"s in certain files, you can do 
-":%s/\r//g" This removes all the carriage returns :). Also the "^M"s 
-are supposedly mismatched endings.
+bind -r m resize-pane -Z
 
-# PowerLevel10k Guide
-1. Install with ohmyzsh clone
-2. move to .zshrc
-3. change theme to powerlevel10k/powerlevel10k before if loop
-4. source .zshrc
-5. exec zshrc
-6. p10k configure
-7. configure to your will.
+# tpm plugin that is REQUIRED!
+set -g @plugin 'tmux-plugins/tpm'
 
+# list of tmux plugins
+set -g @plugin 'christoomey/vim-tmux-navigator'
 
+# keeps tmux data saves and keeps tabs
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
-# Perhaps more plugins to come another day:
-- ranger.nvim
-- nerdtree
+#theme
+set -g @plugin 'catppuccin/tmux'
+set -g @catpuccin_flavour 'frappe' # latte, frappe, macchiato, mocha
+set -g @plugin 'xamut/tmux-weather'
+
+#theme configs
+
+#adds weather
+set -g @catppuccin_status_modules_right '... weather ...'
+
+set -g @catppuccin_window_left_separator ""
+set -g @catppuccin_window_right_separator " "
+set -g @catppuccin_window_middle_separator " █"
+set -g @catppuccin_window_number_position "right"
+
+set -g @catppuccin_window_default_fill "number"
+set -g @catppuccin_window_default_text "#W"
+
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#W"
+
+set -g @catppuccin_status_modules_right "directory user host session"
+set -g @catppuccin_status_left_separator  " "
+set -g @catppuccin_status_right_separator ""
+set -g @catppuccin_status_right_separator_inverse "no"
+set -g @catppuccin_status_fill "icon"
+set -g @catppuccin_status_connect_separator "no"
+
+set -g @catppuccin_directory_text "#{pane_current_path}"
+
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+
+#To install new plugins, do Ctrl-a-I
+
+# initializes Tmux plugin manager (keep line at very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+

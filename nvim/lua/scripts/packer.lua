@@ -35,12 +35,10 @@ return require("packer").startup(function(use)
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-  --This is the tree you can turn it on if you want.
-  --[[use {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional
-  },
-} ]]--
+  --This is ranger but I chose not to use it, below is a dependency.
+  --use { 'francoiscabrol/ranger.vim' }
+  --use("rbgrouleff/bclose.vim")
+  use {'preservim/nerdtree'}
+  use { 'ryanoasis/vim-devicons' }
 
 end)
