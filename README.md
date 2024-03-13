@@ -43,7 +43,7 @@ are supposedly mismatched endings.
 # To customize your TreeSitter plugin to have more LSP for languages:
 -- TSInstall _lang_ <---- _lang_ being target language
 -- Do this in your treesitter.lua (dotfile).
+-- Remember To get Your LSPS at Mason. 
+-- do :Mason in an nvim file to open Mason to donwload tools.
 
 # Perhaps more plugins to come another day:
-- ranger.nvim
-- nerdtree
