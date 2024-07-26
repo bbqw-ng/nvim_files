@@ -29,6 +29,7 @@ return require("packer").startup(function(use)
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
+  use("davidgranstrom/nvim-markdown-preview")
   use("christoomey/vim-tmux-navigator")
   use {
   'nvim-lualine/lualine.nvim',
