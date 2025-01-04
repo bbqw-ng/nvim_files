@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  kanagawa = {
-    loaded = true,
-    path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/kanagawa",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -169,6 +164,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
