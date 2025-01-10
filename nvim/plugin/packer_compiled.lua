@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/nvim-markdown-preview",
     url = "https://github.com/davidgranstrom/nvim-markdown-preview"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/bbqwang/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,

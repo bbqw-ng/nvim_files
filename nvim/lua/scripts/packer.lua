@@ -4,7 +4,8 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
   ---use({ "catppuccin/nvim", as = "catppuccin" })
   use("folke/tokyonight.nvim")
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  --broken last of 1/9/25 need to wait for update :)
+  --use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		-- or                            , branch = '0.1.x',
